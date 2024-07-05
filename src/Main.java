@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.sql.*;
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -5,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         /*Cadena de conexión*/
-        Scanner sc = new Scanner(System.in);
+        /*Scanner sc = new Scanner(System.in);
         String url = "jdbc:mysql://localhost:3306/clase";
         String user = "root";
         String password = "123456";
@@ -31,6 +32,13 @@ public class Main {
         }
         catch (SQLException e){
             System.out.println(e.getMessage());
-        }
+        }*/
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(new form().panel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setSize(800, 600);
+        frame.setVisible(true);
     }
 }
